@@ -1,4 +1,4 @@
-import { header, wallZone, footer } from './components.js';
+import { header, wallZone, footer} from './components.js';
 
 export const feed = () => {
   const sectionEl = document.createElement('section');

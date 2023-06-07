@@ -316,6 +316,16 @@ export const wallZone = () => {
     iconCarrot.setAttribute('id', 'iconCarrot');
     divContainerIconPost.appendChild(iconCarrot);
 
+    // likes
+    const likeCount = document.querySelector('#iconCarrot');
+    console.log(likeCount);
+    let count = 0; // Inicializa el contador de likes
+    iconCarrot.addEventListener('click', () => {
+      // eslint-disable-next-line no-plusplus
+      count++; // Incrementa el contador de likes
+      likeCount.textContent = `${count} likes`; // Actualiza el texto del contador
+    });
+
     const iconComment = document.createElement('img');
     iconComment.src = '../../icon/Comments.png';
     iconComment.alt = 'icono comentario';
