@@ -316,15 +316,59 @@ export const wallZone = () => {
     iconCarrot.setAttribute('id', 'iconCarrot');
     divContainerIconPost.appendChild(iconCarrot);
 
+    // iconCarrot.forEach((btn) => {
+    // btn.addEventListener('click', (e) => {
+    //   const id = e.target.id;
+    //   const gettingDoc = getPost(id);
+    //   const newLike = auth.currentUser.uid;
+    //   console.log(newLike);
+    //   gettingDoc
+    //     .then((doc) => {
+    // console.log(gettingDoc);
+    // if (doc.exists()) {
+    //   console.log(doc, 'doc exists ');
+    //   const likeArray = doc.data().likes;
+    //   console.log(likeArray);
+    //   if (!likeArray.includes(newLike)) {
+    //     likeArray.push(newLike);
+    //   updateAll(id, { likes: likeArray })
+    //     .then(() => {
+    //       console.log('like agregado con exito');
+    //     })
+    //     .catch((error) => {
+    //       console.log('Error al agregar el like', error);
+    //     });
+    // } else {
+    //   const index = likeArray.indexOf(newLike);
+    //   if (index > -1) {
+    //     likeArray.splice(index, 1);
+    //     updateAll(id, { likes: likeArray })
+    //       .then(() => {
+    //         console.log('Like removido con éxito');
+    //       })
+    //       .catch((error) => {
+    //         console.log('Error al remover el like:', error);
+    //       });
+    //   }
+    //           }
+    //         } else {
+    //           console.log('La publicación no existe');
+    //         }
+    //       })
+    //       .catch((error) => {
+    //         console.log('Error al obtener la publicación:', error);
+    //       });
+    //   });
+    // });}}}
     // likes
-    const likeCount = document.querySelector('#iconCarrot');
-    console.log(likeCount);
-    let count = 0; // Inicializa el contador de likes
-    iconCarrot.addEventListener('click', () => {
-      // eslint-disable-next-line no-plusplus
-      count++; // Incrementa el contador de likes
-      likeCount.textContent = `${count} likes`; // Actualiza el texto del contador
-    });
+    // const likeCount = document.querySelector('#iconCarrot');
+    // console.log(likeCount);
+    // let count = 0; // Inicializa el contador de likes
+    // iconCarrot.addEventListener('click', () => {
+    // eslint-disable-next-line no-plusplus
+    // count++; // Incrementa el contador de likes
+    // likeCount.textContent = `${count} likes`; // Actualiza el texto del contador
+    // });
 
     const iconComment = document.createElement('img');
     iconComment.src = '../../icon/Comments.png';
